@@ -1,6 +1,5 @@
-package DeviseAlgorithm.test_3;
-
 //背包问题贪心算法java实现
+package DeviseAlgorithm.test_3;
 import java.util.*;
 
 //v[1..n]和 w[1..n]分别含有按 vi/wi>v(i+1)/v(i+1)排序的 n
