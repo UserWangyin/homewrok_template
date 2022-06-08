@@ -94,28 +94,29 @@ public static void RandomValue(double value[], int len, int max) {
     }
 
 public static void main(String[] args) {
-        //initPackage();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("请输入物品个数：");
-        int N = sc.nextInt();
-        System.out.print("请输入背包的最大容量：");
-        int C = sc.nextInt();
-        double[] weight = new double[N];
-        double[] value = new double[N];
-        //long startTime = System.currentTimeMillis();//起始时间
-        RandomWeight(weight,N,100);
-        System.out.println();
-        RandomValue(value,N,100);
-        double PW[] = new double[value.length];
+        try (//initPackage();
+        Scanner sc = new Scanner(System.in)) {
+            System.out.print("请输入物品个数：");
+            int N = sc.nextInt();
+            System.out.print("请输入背包的最大容量：");
+            int C = sc.nextInt();
+            double[] weight = new double[N];
+            double[] value = new double[N];
+            //long startTime = System.currentTimeMillis();//起始时间
+            RandomWeight(weight,N,100);
+            System.out.println();
+            RandomValue(value,N,100);
+            double PW[] = new double[value.length];
 
-        int[] index = new int[N];
-        long startTime = System.currentTimeMillis();//起始时间
-        sortkp(PW,index,N,value,weight);
-        knapsackgreedy kg = new knapsackgreedy();
-        kg.Knapsack(value,value,C,N);
+            int[] index = new int[N];
+            long startTime = System.currentTimeMillis();//起始时间
+            sortkp(PW,index,N,value,weight);
+            knapsackgreedy kg = new knapsackgreedy();
+            kg.Knapsack(value,value,C,N);
 
-        long endTime = System.currentTimeMillis();//结束时间
-        System.out.println("\n程序运行时间： " + (endTime - startTime ) + "ms");
+            long endTime = System.currentTimeMillis();//结束时间
+            System.out.println("\n程序运行时间： " + (endTime - startTime ) + "ms");
+        }
     }
 
 }
