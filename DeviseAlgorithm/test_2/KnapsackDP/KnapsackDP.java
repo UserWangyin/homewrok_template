@@ -1,5 +1,5 @@
-package DeviseAlgorithm.test_2.KnapsackDP;
 //0—1背包动态规划java实现
+package DeviseAlgorithm.test_2.KnapsackDP;
 import java.util.Scanner;
 public class KnapsackDP {
 //    N表示物体的个数，V表示背包的载重
