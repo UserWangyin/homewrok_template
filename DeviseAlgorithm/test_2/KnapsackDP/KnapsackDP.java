@@ -6,8 +6,7 @@ public class KnapsackDP {
     weight[]用于存储每个物体的重量，下标从1开始;  
     value[]存储每个物体的价值，下标从1开始 ;
     F[][]二维数组，用来保存每种状态下的最大收益
-
-    //使用非递归方式，求解F[0 .. N][0 .. V]，即for循环从下至上求解
+    使用非递归方式，求解F[0 .. N][0 .. V]，即for循环从下至上求解
  */
 	
     public static void ZeroOnePackNonRecursive(int N, int V, int weight[], int value[], int F[][]) {
