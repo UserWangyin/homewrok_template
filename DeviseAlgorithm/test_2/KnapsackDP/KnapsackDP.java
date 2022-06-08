@@ -1,4 +1,4 @@
-//0—1背包动态规划java实现
+//背包动态规划java实现
 package DeviseAlgorithm.test_2.KnapsackDP;
 import java.util.Scanner;
 public class KnapsackDP {
