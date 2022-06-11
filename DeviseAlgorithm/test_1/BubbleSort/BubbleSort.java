@@ -17,10 +17,6 @@ public class BubbleSort{
 			System.out.print(arr[i]+" ");
 		}
         BubbleSortAlgorithm(arr);
-        // System.out.println("\n排序后的数组：");
-        // for (int i = 0; i < arr.length; i++) {
-		// 	System.out.print(arr[i]+" ");
-		// }
 	}
     //随机生成数组 
 	public static int[]  RandomArray(int len,int max){
