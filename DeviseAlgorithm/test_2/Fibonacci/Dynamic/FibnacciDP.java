@@ -5,15 +5,16 @@
 */
 import java.util.Scanner;
 
-public class FibonacciDP {
+public class FibnacciDP {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("请输入斐波那契数列的项数：");
-        int n = sc.nextInt();
-        DPF dp=new DPF();
-        System.out.print("动态规划结果为：");
-        for(int i=1;i<=n;i++){
-            System.out.print(dp.fib(i)+" ");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("请输入斐波那契数列的项数：");
+            int n = sc.nextInt();
+            DPF dp=new DPF();
+            System.out.print("动态规划结果为：");
+            for(int i=1;i<=n;i++){
+                System.out.print(dp.fib(i)+" ");
+            }
         }
     }
 }
