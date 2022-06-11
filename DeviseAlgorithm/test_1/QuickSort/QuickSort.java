@@ -9,19 +9,20 @@ import java.util.Scanner;
 public class QuickSort {
     public static void main(String[] args) {
         QuickSortAlgorithm qs = new QuickSortAlgorithm();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("请输入数组的长度：");
-        int n = sc.nextInt();
-        int [] a=qs.RandomArray(n,100000);   //生成随机数组
-        System.out.println("随机序列");
-        for (int j : a) {
-            System.out.print(j+" ");
-        }
-        System.out.println();
-        qs.quickSort(a,0,a.length-1);
-        System.out.println("快速排序生成的非降序序列");
-        for (int j : a) {
-            System.out.print(j+" ");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("请输入数组的长度：");
+            int n = sc.nextInt();
+            int [] a=qs.RandomArray(n,100000);   //生成随机数组
+            System.out.println("随机序列");
+            for (int j : a) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+            qs.quickSort(a,0,a.length-1);
+            System.out.println("快速排序生成的非降序序列");
+            for (int j : a) {
+                System.out.print(j+" ");
+            }
         }
     }
 }

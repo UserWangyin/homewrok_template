@@ -63,19 +63,20 @@ class MergeSort_1{
 			return arr;
 	}
     public void InitMerage(){
-        Scanner input=new Scanner(System.in);
-        System.out.print("请输入数组长度：");
-        int n=input.nextInt();
-        //int sum=0;
-		int []arr=RandomArray(n, 10000);
-        System.out.println("排序前的数组：");
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+" ");
-		}
-        Merge_sort(arr,0,arr.length -1);//从数组A的0位到A.length-1位排序
-        System.out.println("\n合并排序后的结果： ");
-        for(int i = 0;i < arr.length;i++){
-            System.out.print(arr[i] + " ");
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("请输入数组长度：");
+            int n=input.nextInt();
+            //int sum=0;
+            int []arr=RandomArray(n, 10000);
+            System.out.println("排序前的数组：");
+            for (int i = 0; i < arr.length; i++) {
+            	System.out.print(arr[i]+" ");
+            }
+            Merge_sort(arr,0,arr.length -1);//从数组A的0位到A.length-1位排序
+            System.out.println("\n合并排序后的结果： ");
+            for(int i = 0;i < arr.length;i++){
+                System.out.print(arr[i] + " ");
+            }
         }
         System.out.println();
     }
