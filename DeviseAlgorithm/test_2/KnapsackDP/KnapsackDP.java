@@ -92,24 +92,25 @@ class package01_1{
     }
     //初始化
     public void initPackage(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("请输入物品个数：");
-        int N = sc.nextInt();
-        System.out.print("请输入背包的最大容量：");
-        int C = sc.nextInt();
-        int[] weight = new int[N];
-        int[] value = new int[N];
-        RandomWeight(weight,N,100);
-        System.out.println();
-        RandomValue(value,N,100);
-        //int F[][] = knapsack(N,C,weight,value);
-        long startTime = System.currentTimeMillis();//起始时间
-        int F[][] = knapsack(N,C,weight,value);
-        Judge(N,C,weight,F);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("请输入物品个数：");
+            int N = sc.nextInt();
+            System.out.print("请输入背包的最大容量：");
+            int C = sc.nextInt();
+            int[] weight = new int[N];
+            int[] value = new int[N];
+            RandomWeight(weight,N,100);
+            System.out.println();
+            RandomValue(value,N,100);
+            //int F[][] = knapsack(N,C,weight,value);
+            long startTime = System.currentTimeMillis();//起始时间
+            int F[][] = knapsack(N,C,weight,value);
+            Judge(N,C,weight,F);
 
-        System.out.println("\n最大价值为："+F[N][C]);
-        long endTime = System.currentTimeMillis();//结束时间
-        System.out.println("\n程序运行时间： " + (endTime - startTime ) + "ms");
+            System.out.println("\n最大价值为："+F[N][C]);
+            long endTime = System.currentTimeMillis();//结束时间
+            System.out.println("\n程序运行时间： " + (endTime - startTime ) + "ms");
+        }
     }
 }
 
