@@ -1,54 +1,28 @@
 /*
- 背包问题，贪心算法C实现
- v[1..n]和 w[1..n]分别含有按 vi/wi>v(i+1)/v(i+1)排序的 n
- 件物品的价值和重量。M 是背包的容量大小，而 x[1..n]是解向量
- */
-
+    背包问题，贪心算法C实现
+    学号：20201050470
+    时间复杂度：O(n^2)
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 
 void package(float P[], float w[], int M,int n);//贪心算法
-void RandomWeight(float *list, int n, int l, int r);//生成范围在l~r的随机物品重量
-void RandomValue(float *list, int n, int l, int r);//生成范围在l~r的随机物品价值
-void sortkp(float pw[],int index[], float w[],float v[],int n);////按照价值排序
+//void package(int n,float c,float v[],float w[],int x[]);
+void RandomWeight(float *list, int n, int l, int r);//随机生成n个数，每个数的范围在[l,r]之间
+void RandomValue(float *list, int n, int l, int r);//随机生成n个数，每个数的范围在[l,r]之间
+void sortkp(float pw[],int index[], float w[],float v[],int M,int n);//按照价值排序
+void initpackage();//初始化背包
 
 
 int main(){
-  int n;
-  float c;
-
-  clock_t begin, end;
-  double cost;
-
-  printf("请输入物品个数：");
-  scanf("%d",&n);
-  printf("请输入背包最大容量：");
-  scanf("%f",&c);
-  float v[n];
-  float w[n];
-  
-
-  RandomWeight(w,n,1,100);
-  RandomValue(v,n,1,100);
-
-  begin = clock();//开始计时
-  float pw[n];
-  int x[n];
-  sortkp(pw,x,v,w,n);
-  package(v,w,c,n);
-  end = clock();//结束计时
-  cost = (double)(end - begin)*1000/CLOCKS_PER_SEC;
-  //CLOCKS_PER_SEC=1000,它用来表示一秒钟会有多少个时钟计时单元，
-  //时钟计时单元的长度为1毫秒，clock()/CLOCKS_PER_SEC就是将毫秒转化为秒。
-
-  printf("\n运行时间: %lf ms",cost);
-  //package(n,c,v,w,x);
+  initpackage();
   return 0;
 }
-//贪心算法
+
 void package(float P[], float w[], int M,int n)
 {
+  //printf("%d\n",M);
   int i;
   float x[n];
   for (i = 0; i < n; i++)
@@ -77,6 +51,12 @@ void package(float P[], float w[], int M,int n)
   {
    printf("%f ", x[i]);
   }
+  float sum=0;
+  for (i = 0; i < n; i++)
+  {
+    sum=sum+x[i]*P[i];
+  }
+  printf("\n最优解的价值为：%f\n",sum);
 }
 
 void RandomWeight(float *list, int n, int l, int r) //生成范围在l~r的随机物品重量
@@ -108,10 +88,10 @@ void RandomValue(float *list, int n, int l, int r) //生成范围在l~r的随机
     printf("%f ", list[i]);
   }
 }
+
+
 //排序
-//v[1..n]和 w[1..n]分别含有按 vi/wi>v(i+1)/v(i+1)排序的 n
-//件物品的价值和重量。
-void sortkp(float pw[],int index[], float w[],float v[],int n)
+void sortkp(float pw[],int index[], float w[],float v[],int M,int n)
 {
   for(int i=0;i<n;i++)
   {
@@ -119,9 +99,9 @@ void sortkp(float pw[],int index[], float w[],float v[],int n)
    index[i]=i;
   }
   float temp=0;
-  for (int i = 0; i < n - 1; i++) {
+  for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
-                if (pw[i] < pw[j])       //对效益/重量数组按递增进行排序
+                if (pw[i] < pw[j])   //对价值/重量数组按递增进行排序    
                 {
                     temp = pw[i];
                     pw[i] = pw[j];
@@ -154,4 +134,37 @@ void sortkp(float pw[],int index[], float w[],float v[],int n)
         {
           printf("%f ",v1[i]);
         }
+        //printf("%d\n",M);
+        package(v1,w1,M,n);
+}
+
+void initpackage(){
+  int n;
+  int M;
+
+  clock_t begin, end;
+  double cost;
+
+  printf("请输入物品个数：");
+  scanf("%d",&n);
+  printf("请输入背包最大容量：");
+  scanf("%d",&M);
+  float v[n];
+  float w[n];
+
+  RandomWeight(w,n,1,100);
+  RandomValue(v,n,1,100);
+
+  float pw[n];
+  int x[n];
+  begin = clock();//开始计时
+  sortkp(pw,x,w,v,M,n);
+  //package(v,w,c,n);
+  end = clock();//结束计时
+  cost = (double)(end - begin)*1000/CLOCKS_PER_SEC;
+  //CLOCKS_PER_SEC=1000,它用来表示一秒钟会有多少个时钟计时单元，
+  //时钟计时单元的长度为1毫秒，clock()/CLOCKS_PER_SEC就是将毫秒转化为秒。
+
+  printf("\n运行时间: %lf ms",cost);
+  printf("\n");
 }
