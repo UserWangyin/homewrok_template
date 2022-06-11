@@ -9,12 +9,13 @@ import java.util.Scanner;
 
 public class FibnacciDAC{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("请输入斐波那契数列的项数：");
-        int n = sc.nextInt();
-        DACF dp=new DACF();
-        System.out.print("分治法结果为：");
-        System.out.println(dp.fib(n));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("请输入斐波那契数列的项数：");
+            int n = sc.nextInt();
+            DACF dp=new DACF();
+            System.out.print("分治法结果为：");
+            System.out.println(dp.fib(n));
+        }
     }
 }
 
