@@ -1,10 +1,14 @@
-//归并排序C
+/*
+   归并排序C实现
+   学号：20201050470
+   时间复杂度：O(n*logn)
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 
 int sum=0;//记录比较次数
-
+// 合并两个有序数组
 void Merge(int Array[], int first, int middle, int last){//合并函数
 	int n1 = middle - first;//左半边数组长度
 	int n2 = last - middle;//右半边数组长度
@@ -37,6 +41,7 @@ void Merge(int Array[], int first, int middle, int last){//合并函数
 	}
 	sum=sum+n1+n2;//记录比较次数
 }
+// 归并排序函数
 void MergeSort(int list[], int first, int last){
 	
 	if(first + 1 < last){     		 
