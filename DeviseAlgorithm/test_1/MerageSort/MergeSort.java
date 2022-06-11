@@ -3,6 +3,7 @@
    学号：20201050470
    时间复杂度：O(nlog2n)
 */
+
 import java.util.Scanner;
 public class MergeSort {
     public static void main(String[] args) {
@@ -76,5 +77,6 @@ class MergeSort_1{
         for(int i = 0;i < arr.length;i++){
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 }

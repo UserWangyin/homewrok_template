@@ -3,20 +3,21 @@
    学号：20201050470
    时间复杂度：O(n^2)
 */
-package DeviseAlgorithm.test_1.BubbleSort;
+
 import java.util.Scanner;
 
 public class BubbleSort{
     public static void main(String[] args) {
-        Scanner input=new Scanner(System.in);
-        System.out.print("请输入数组长度：");
-        int n=input.nextInt();
-		int []arr=RandomArray(n, 10000);
-        System.out.println("排序前的数组：");
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+" ");
-		}
-        BubbleSortAlgorithm(arr);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("请输入数组长度：");
+            int n=input.nextInt();
+            int []arr=RandomArray(n, 10000);
+            System.out.println("排序前的数组：");
+            for (int i = 0; i < arr.length; i++) {
+            	System.out.print(arr[i]+" ");
+            }
+            BubbleSortAlgorithm(arr);
+        }
 	}
     //随机生成数组 
 	public static int[]  RandomArray(int len,int max){

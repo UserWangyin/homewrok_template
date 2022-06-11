@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "DeviseAlgorithm/test_1/QuickSort",
+        "DeviseAlgorithm/test_1/BubbleSort",
+        "DeviseAlgorithm/test_1/MerageSort"
+    ]
+}
