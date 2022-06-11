@@ -1,5 +1,13 @@
+/*
+   斐波那契数分治法C语言实现
+   学号：20201050470
+*/
+
 #include<stdio.h>
-int DAC_f(int n){  //分治法
+
+/*分治法*/ 
+int DAC_f(int n){ 
+
 	if(n==1||n==2){
 		return 1;}
 	else{
@@ -8,7 +16,7 @@ int DAC_f(int n){  //分治法
 }
 int main(){
 	int n;
-	printf("请输入测试值: ");
+	printf("请输入斐波那契数列的项数: ");
 	scanf("%d",&n);
 	printf("DAC_f(%d)=%d",n,DAC_f(n));
 	n=0;

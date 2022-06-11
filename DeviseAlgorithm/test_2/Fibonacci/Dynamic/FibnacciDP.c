@@ -1,9 +1,16 @@
-//动态规划
+/*
+    斐波那契数动态规划法(Dynamic Programming)
+	学号：20201050470
+	时间复杂度：O(n)
+
+*/
 #include<stdio.h>
-int f[100000000]={0};//用于存储fibonacci数列
-int DP_f(int n){//动态规划法
-	//int f[n]=0;
-	for(int i=0;i<=n;i++){
+#include<stdlib.h>
+/*动态规划法*/ 
+int *DP_f(int n){
+	int *f=(int*)malloc(sizeof(int)*n);
+	f[0]=0;
+	for(int i=1;i<=n;i++){
 		if(i==1||i==2){
 			f[i]=1;
 		}
@@ -11,13 +18,18 @@ int DP_f(int n){//动态规划法
 			f[i]=f[i-1]+f[i-2];
 		}
 	}
-	return f[n];//返回fibonacci数列的第n个数
+	return f;//返回fibonacci数列
 }
+
 int main(){
 	int n;
 	printf("输入测试数据: ");
 	scanf("%d",&n);
-    printf("DP_f(%d)=%d",n,DP_f(n));
-	n=0;
+	printf("输出结果为：");
+	int *f=DP_f(n);
+	for(int i=1;i<=n;i++){
+		printf("%d ",f[i]);
+	}
 	return 0;
 }
+

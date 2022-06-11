@@ -3,19 +3,19 @@
 # 时间复杂度：O(nlog(n))
 import random
 
-# def RandomArray(n):
-#     arr = []
-#     for i in range(n):
-#         arr.append(random.randint(-100000, 100000))
-#     return arr
+def RandomArray(n):
+    arr = []
+    for i in range(n):
+        arr.append(random.randint(-100000, 100000))
+    return arr
 
 # 生成线性同余序列
-def randlist(m, a, c, x0, n):
-    arr = [x0]
-    i: int
-    for i in range(n - 1):
-        arr.append((a * arr[i] + c) % m)
-    return arr
+# def randlist(m, a, c, x0, n):
+#     arr = [x0]
+#     i: int
+#     for i in range(n - 1):
+#         arr.append((a * arr[i] + c) % m)
+#     return arr
 
 
 # 快速排序
@@ -31,7 +31,7 @@ def quick_sort(arr):
 # 测试算法
 if __name__ == '__main__':
     n = (int)(input("随机数组长度："))
-    arr=randlist(100000, n, 0, 0, n)
-    # arr = RandomArray(n)
-    print(arr)
-    print(quick_sort(arr))
+    # arr=randlist(100000, n, 0, 100, n)
+    arr = RandomArray(n)
+    print("排序前：\n",arr)
+    print("\n排序后：\n",quick_sort(arr))
