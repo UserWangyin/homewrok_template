@@ -1,31 +1,36 @@
+/*
+   冒泡排序java实现
+   学号：20201050470
+   时间复杂度：O(n^2)
+*/
 package DeviseAlgorithm.test_1.BubbleSort;
-
-//冒泡排序java实现
 import java.util.Scanner;
+
 public class BubbleSort{
     public static void main(String[] args) {
-        try (Scanner input = new Scanner(System.in)) {
-            System.out.print("请输入数组长度：");
-            int n=input.nextInt();
-            int []arr=RandomArray(n, 10000);
-            System.out.println("排序前的数组：");
-            for (int i = 0; i < arr.length; i++) {
-            	System.out.print(arr[i]+" ");
-            }
-            BubbleSortAlgorithm(arr);
-            // System.out.println("\n排序后的数组：");
-            // for (int i = 0; i < arr.length; i++) {
-            // 	System.out.print(arr[i]+" ");
-            // }
-        }
+        Scanner input=new Scanner(System.in);
+        System.out.print("请输入数组长度：");
+        int n=input.nextInt();
+		int []arr=RandomArray(n, 10000);
+        System.out.println("排序前的数组：");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+        BubbleSortAlgorithm(arr);
+        // System.out.println("\n排序后的数组：");
+        // for (int i = 0; i < arr.length; i++) {
+		// 	System.out.print(arr[i]+" ");
+		// }
 	}
-		public static int[]  RandomArray(int len,int max){
-			int[] arr=new int[len];
-			for(int i=0;i<arr.length;i++){
-				arr[i]=(int)(Math.random()*max);
-			}
-			return arr;
+    //随机生成数组 
+	public static int[]  RandomArray(int len,int max){
+		int[] arr=new int[len];
+		for(int i=0;i<arr.length;i++){
+			arr[i]=(int)(Math.random()*max);
+		}
+		return arr;
 	}
+    // 冒泡排序算法
     public static void BubbleSortAlgorithm(int[] arr){
         //int temp;
         int sum=0;
