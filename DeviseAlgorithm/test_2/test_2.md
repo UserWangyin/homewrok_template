@@ -41,6 +41,15 @@
 实验过程及实验结果（Python版）
 3. ![knapsackDP.py](./KnapsackDP/KnapsackDP.py)
 
+
+## 结果分析
+打印时间去除后
+![C=200](./data_2/images_2/Knapsackdp/c2.png)
+![C=400](./data_2/images_2/Knapsackdp/c4.png)
+![C=800](./data_2/images_2/Knapsackdp/c8.png)
+![C=2000](./data_2/images_2/Knapsackdp/c20.png)
+
+
 ## 实验 2.2 动态规划算法的适应性测试
 
 ### 实验目的：
