@@ -37,3 +37,7 @@
 
 实验过程及实验结果（C版）
 2. ![knapsackgreedy.c](./images_3/kgc.png)
+
+
+分析结果：
+![knapsackgreedy.c](./images_3/kgddc.png)
