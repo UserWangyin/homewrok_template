@@ -82,32 +82,44 @@ void MergeSort(int list[], int first, int last){
 	}
 }
 
+//分区
+int Partition(int *list,int left,int right){
+    int i=left+1,j=right;
+    //int sum = 0;
+    while(i<j){
+        while(i<=j&&list[i]<=list[j]){
+            j--;
+        }
+        if(i<j){
+            int temp=list[i];
+            list[i]=list[j];
+            list[j]=temp;
+            i++;
+        }
+        while(i<=j&&list[i]>=list[j]){
+            i++;
+        }
+        if(i<j){
+            int temp=list[i];
+            list[i]=list[j];
+            list[j]=temp;
+            j--;
+        }
+
+    }
+    Qsum=Qsum+j-left+right-i;
+    //printf("%d\n",sum);
+    return i;
+}
 //快速排序
 void QuickSort(int *list,int left,int right){
-  
-    if(left < right){
-        int i = left,j = right,x = list[left];
-        while(i < j){
-            while(i < j && list[j] >= x){//从右向左找第一个小于x的数
-                j--;                     //找到后，将其和x交换
-                compare++;
-            }
-            list[i] = list[j];      //将找到的小于x的数放到左边
-            while(i < j && list[i] <= x){//从左向右找第一个大于x的数
-                i++;                    //找到后将其放到右边
-                compare++;
-            }
-            list[j] = list[i];//交换
-        }
-        list[i] = x;//将x放到最终位置
-        QuickSort(list,left,i-1);
-        QuickSort(list,i+1,right);
-        Qsum=Qsum+i-left+right-i;//记录次数
-        //printf("比较次数：%d\n",sum);
+    int pivot;
+    if(left<right){
+        pivot=Partition(list,left,right);
+        QuickSort(list,left,pivot-1);
+        QuickSort(list,pivot+1,right);
     }
-     //printf("比较次数：%d\n",Qsum);
 }
-
 
 int main(){
     int n;  //数组元素的个数，即生成随机数的个数
