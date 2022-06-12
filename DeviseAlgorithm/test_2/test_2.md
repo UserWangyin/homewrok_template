@@ -73,6 +73,7 @@
 1. [FinacciDAC.py](./Fibonacci/Dynamic/FibonacciDP.py) 算法实现的python版本
 2. [FinacciDAC.c](./Fibonacci/Dynamic/FibonacciDP.c) 算法实现的C语言版本
 3. [FinacciDAC.java](./Fibonacci/Dynamic/FibonacciDP.java) 算法实现的java版本
+4. [Fib.c](./Fib.c)
 
 ### 实验预期结果与实际结果
 
@@ -89,8 +90,11 @@
 +  实验预期结果：
 
 实验过程及实验结果（Java版）
-1. ![FinacciDP](./data_2/images_2/DynamicI/dpj.png)
+1. ![FinacciDP.java](./data_2/images_2/DynamicI/dpj.png)
 实验过程及实验结果（C版）
-2. ![FinacciDP](./data_2/images_2/DynamicI/dpc.png)
+2. ![FinacciDP.c](./data_2/images_2/DynamicI/dpc.png)
 实验过程及实验结果（Python版)
-3. ![FinacciDP](./data_2/images_2/DynamicI/dpp.png)
+3. ![FinacciDP.py](./data_2/images_2/DynamicI/dpp.png)
+
+#### Fib
+[Fib.c](./data_2/DynamicI/fibc.png)
