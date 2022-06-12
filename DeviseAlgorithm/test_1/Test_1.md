@@ -147,3 +147,7 @@
 ![BMQ.c](./data_1/images_1/BMQ/bmq2000.png)
 ![BMQ.c](./data_1/images_1/BMQ/bmq5000.png)
 ![BMQ.c](./data_1/images_1/BMQ/bmq10000.png)
+
+
+结果分析：
+![BQM.c](./data_1/images_1/BMQ/BMQCC.png)
