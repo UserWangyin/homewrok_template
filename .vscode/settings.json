@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "DeviseAlgorithm/test_2/KnapsackDP",
         "DeviseAlgorithm/test_2/Fibonacci/Dynamic",
         "DeviseAlgorithm/test_1/QuickSort",
         "DeviseAlgorithm/test_1/MerageSort",
         "DeviseAlgorithm/test_1/BubbleSort",
-        "DeviseAlgorithm/test_2/KnapsackDP"
+        "DeviseAlgorithm/test_3"
     ]
 }
