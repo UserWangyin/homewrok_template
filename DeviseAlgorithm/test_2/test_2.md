@@ -4,7 +4,6 @@
 
 ## 实验 2.1 动态规划算法的实现与时间复杂度测试
 
-
 ## 实验目的：
 
 >编程实现经典的动态规划算法，理解动态规划算法设计的基本思想、程序实现的相关技巧，加深对动态规划算法设计与
@@ -42,7 +41,6 @@
 实验过程及实验结果（Python版）
 3. ![knapsackDP.py](./KnapsackDP/KnapsackDP.py)
 
-
 ## 实验 2.2 动态规划算法的适应性测试
 
 ### 实验目的：
@@ -75,7 +73,6 @@
 1. [FinacciDAC.py](./Fibonacci/Dynamic/FibonacciDP.py) 算法实现的python版本
 2. [FinacciDAC.c](./Fibonacci/Dynamic/FibonacciDP.c) 算法实现的C语言版本
 3. [FinacciDAC.java](./Fibonacci/Dynamic/FibonacciDP.java) 算法实现的java版本
-
 
 ### 实验预期结果与实际结果
 
