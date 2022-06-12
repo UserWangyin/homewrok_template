@@ -142,8 +142,8 @@
 
 实验过程及实验结果（C版）
 ![BMQ.c](./data_1/images_1/BMQ/BMq10.png)
-![BMQ.c](./data_1/images_1/BMQ/BMq100.png)
-![BMQ.c](./data_1/images_1/BMQ/BMq1000.png)
-![BMQ.c](./data_1/images_1/BMQ/BMq2000.png)
-![BMQ.c](./data_1/images_1/BMQ/BMq5000.png)
-![BMQ.c](./data_1/images_1/BMQ/BMq10000.png)
+![BMQ.c](./data_1/images_1/BMQ/bmq100.png)
+![BMQ.c](./data_1/images_1/BMQ/bmq1000.png)
+![BMQ.c](./data_1/images_1/BMQ/bmq2000.png)
+![BMQ.c](./data_1/images_1/BMQ/bmq5000.png)
+![BMQ.c](./data_1/images_1/BMQ/bmq10000.png)
