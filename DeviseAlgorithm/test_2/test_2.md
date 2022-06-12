@@ -98,3 +98,6 @@
 
 #### Fib
 [Fib.c](./data_2/DynamicI/fibc.png)
+
+结果分析：
+![Fib.c](./data_2/images_2/DivideI/fdpc.png)
