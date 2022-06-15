@@ -1,6 +1,5 @@
 /*
     BubbleSort,MergeSort,QuickSort算法比较操作次数比较
-    学号：202010650470
 */
 #include <stdio.h>
 #include <stdlib.h>

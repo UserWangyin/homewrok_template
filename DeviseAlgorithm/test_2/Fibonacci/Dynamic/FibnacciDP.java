@@ -1,6 +1,5 @@
 /*  
      Java斐波那契数列动态规划(Dynamic Programming)
-     学号：20201050470
      时间复杂度：O(n)
 */
 import java.util.Scanner;

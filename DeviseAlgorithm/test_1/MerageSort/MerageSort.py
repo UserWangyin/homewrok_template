@@ -1,5 +1,4 @@
 # 归并排序Python实现
-# 学号：20201050470
 # 时间复杂度：O(nlog(n))
 
 import random

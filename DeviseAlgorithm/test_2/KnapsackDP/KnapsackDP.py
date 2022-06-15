@@ -1,5 +1,4 @@
 # 0-1背包动态规划Python实现
-# 学号：20201050470
 # 时间复杂度;O(n*c)
 import random
 import time

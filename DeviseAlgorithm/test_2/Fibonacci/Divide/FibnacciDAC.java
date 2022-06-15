@@ -2,7 +2,6 @@
     java斐波那契数列分治法(Divide and Conquer)
     分治法的基本思想是：
     将问题分解为子问题，然后递归解决子问题，最后合并解决子问题得到原问题的解。
-    学号：20201050470
 */
 
 import java.util.Scanner;
