@@ -1,7 +1,3 @@
-/*
-    背包问题，贪心算法C实现
-    时间复杂度：O(n^2)
-*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
