@@ -1,6 +1,6 @@
 /*
    归并排序Java实现
-   时间复杂度：O(nlog2n)
+   时间复杂度：O(nlog n)
 */
 
 import java.util.Scanner;
